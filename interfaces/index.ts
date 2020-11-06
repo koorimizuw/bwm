@@ -4,7 +4,20 @@
 //
 // import User from 'path/to/interfaces';
 
-export type User = {
-  id: number
-  name: string
+export interface IntroItem {
+  title: string,
+  subtitle: string,
+  text: string | string[],
+  image?: any,
+  color?: string,
+  reverse?: boolean,
+  light?: boolean,
+  id?: string,
+  prev?: string,
+  next?: string
+}
+
+export interface MenuLink {
+  title: string,
+  href: string
 }
