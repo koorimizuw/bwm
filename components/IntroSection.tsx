@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Fade from 'react-reveal/Fade';
 import Link from 'next/link'
 import { Link as ScrollLink } from 'react-scroll';
 import Title from "./Intro/Title"
@@ -96,22 +97,24 @@ const IntroSection = ({
     <Main id={id} color={light ? '#fff' : color} reverse={reverse}>
       <Visual src={image} />
       <Container>
-        <Section reverse={reverse}>
-          <Title
-            color={light ? color : '#fff'}
-          >{title}</Title>
-          <SubTitle color={light ? '#ccc' : '#fff'}>{subtitle}</SubTitle>
-          <Text color={light ? '#000' : '#fff'}>{text}</Text>
-          <Link href={`/${id}`}>
-            <Button
-              width={160}
-              height={47}
-              size={16}
-              border={light ? '#ccc' : '#fff'}
+        <Fade>
+          <Section reverse={reverse}>
+            <Title
               color={light ? color : '#fff'}
-            >Read More</Button>
-          </Link>
-        </Section>
+            >{title}</Title>
+            <SubTitle color={light ? '#ccc' : '#fff'}>{subtitle}</SubTitle>
+            <Text color={light ? '#000' : '#fff'}>{text}</Text>
+            <Link href={`/${id}`}>
+              <Button
+                width={160}
+                height={47}
+                size={16}
+                border={light ? '#ccc' : '#fff'}
+                color={light ? color : '#fff'}
+              >Read More</Button>
+            </Link>
+          </Section>
+        </Fade>
         <Scroll reverse={reverse}>
           <Scrolly
             activeClass="active"
