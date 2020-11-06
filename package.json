@@ -1,15 +1,17 @@
 {
-  "name": "with-typescript",
+  "name": "bwm",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.4",
     "next": "latest",
+    "next-on-netlify": "^2.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scroll": "^1.8.1",
