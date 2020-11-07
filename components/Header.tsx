@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link'
 import styled from "styled-components"
 import MenuMain from '../components/Menu'
 
@@ -17,6 +18,7 @@ const Main = styled.div`
     justify-content: space-between;
     color: #fff;
     line-height: 70px;
+    z-index: 3;
 `
 
 const LogoContainer = styled.div`
@@ -28,6 +30,7 @@ const LogoContainer = styled.div`
 const Logo = styled.div`
   position: absolute;
   width: 250px;
+  cursor: pointer;
 `
 
 const Menu = styled.div`
@@ -57,7 +60,9 @@ const Header = ({ divider = false }: Props) => {
   return (
     <Main>
       <LogoContainer>
-        <Logo>BMW Fan!!!!!</Logo>
+        <Link href="/">
+          <Logo>BMW Fan!!!!!</Logo>
+        </Link>
       </LogoContainer>
       <div>
         <Menu onClick={() => setShowMenu(!showMenu)}>

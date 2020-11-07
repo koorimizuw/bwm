@@ -13,7 +13,7 @@ const Container = styled.div`
         margin: 100px 60px 100px;
     }
     @media (max-width: 480px) {
-      margin: 0 20px 50px;
+      margin: 25px 20px 40px;
       text-align: left;
     }
 `

@@ -16,6 +16,7 @@ const Button = styled.button<{
     @media (max-width: 480px) {
         width: 100%;
         margin: 0 auto;
+        height: 46px;
     }
 `
 

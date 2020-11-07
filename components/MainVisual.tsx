@@ -8,7 +8,7 @@ const Background = styled.img`
     width: 100vw;
     object-fit: cover;
     @media (max-width: 480px) {
-      min-height: 250px;
+      min-height: 254px;
     }
 `
 
@@ -16,6 +16,9 @@ const Main = styled.div`
     position: relative;
     height: 380px;
     z-index: 0;
+    @media (max-width: 480px) {
+      height: 290px;
+    }
     &::before{
         content: "";
         height: 400px;
@@ -32,7 +35,8 @@ const Main = styled.div`
           top: -10px;
         }
         @media (max-width: 480px) {
-          height: 350px;
+          top: -3px;
+          height: 290px;
         }
     }
 
@@ -43,6 +47,9 @@ const Container = styled.div`
     text-align: center;
     @media (max-width: 991px) {
       padding: 100px 20px 0;
+    }
+    @media (max-width: 480px) {
+      padding: 70px 20px 0;
     }
 `
 

@@ -3,9 +3,10 @@ import Link from 'next/link'
 import { MenuLink } from '../interfaces'
 
 const Overlay = styled.div`
+    position: absolute;
+    right: 0;
     width: 320px;
     display: block;
-    float:right;
     background: #000;
 `
 
@@ -47,6 +48,7 @@ const LinkItem = styled.div`
   font-weight: 200;
   height: 50px;
   line-height: 50px;
+  cursor: pointer;
   a{
     text-decoration: none;
     color: #fff;
@@ -65,7 +67,9 @@ const MenuMain = () => (
   <Overlay>
     {
       link.map((item, index) => {
-        return <LinkItem key={index} ><Link href={item.href}>{item.title}</Link></LinkItem>
+        return <Link key={index} href={item.href}>
+          <LinkItem >{item.title}</LinkItem>
+        </Link>
       })
     }
   </Overlay>
