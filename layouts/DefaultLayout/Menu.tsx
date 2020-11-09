@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { MenuLink } from "@/interfaces";
+import { MenuLink } from "✨/interfaces";
 
 const Overlay = styled.div`
   position: absolute;

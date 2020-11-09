@@ -1,5 +1,5 @@
-import "@/css/html5reset-1.6.1.css";
-import "@/css/font-awesome.min.css";
+import "✨/css/html5reset-1.6.1.css";
+import "✨/css/font-awesome.min.css";
 import React from "react";
 
 import { createGlobalStyle, ThemeProvider } from "styled-components";

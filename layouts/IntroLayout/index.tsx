@@ -1,7 +1,7 @@
-import { IntroItem } from "@/interfaces";
 import styled from "styled-components";
-import { Title, SubTitle } from "@/components";
-import { DefaultLayout } from "@/layouts";
+import { IntroItem } from "✨/interfaces";
+import { Title, SubTitle } from "✨/components";
+import { DefaultLayout } from "✨/layouts";
 
 const Container = styled.div`
   max-width: 960px;

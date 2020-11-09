@@ -1,10 +1,10 @@
-import { DefaultLayout } from "@/layouts";
-import { IntroItem } from "@/interfaces";
-import pic2 from "@/images/pic2.jpg";
-import pic3 from "@/images/pic3.jpg";
-import pic4 from "@/images/pic4.jpg";
-import pic5 from "@/images/pic5.jpg";
-import pic6 from "@/images/pic6.jpg";
+import { DefaultLayout } from "✨/layouts";
+import { IntroItem } from "✨/interfaces";
+import pic2 from "✨/images/pic2.jpg";
+import pic3 from "✨/images/pic3.jpg";
+import pic4 from "✨/images/pic4.jpg";
+import pic5 from "✨/images/pic5.jpg";
+import pic6 from "✨/images/pic6.jpg";
 import { MainVisual } from "./MainVisual";
 import { IntroBox } from "./IntroBox";
 import { IntroSection } from "./IntroSection";

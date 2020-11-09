@@ -1,5 +1,5 @@
-import { IntroLayout } from "@/layouts";
-import image from "@/images/pic2.jpg";
+import { IntroLayout } from "✨/layouts";
+import image from "✨/images/pic2.jpg";
 
 export default function Page() {
   return (

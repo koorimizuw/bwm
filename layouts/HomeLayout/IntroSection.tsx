@@ -2,8 +2,8 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
-import { Button, Title, SubTitle } from "@/components";
-import { IntroItem } from "@/interfaces";
+import { Button, Title, SubTitle } from "✨/components";
+import { IntroItem } from "✨/interfaces";
 
 const Main = styled.div<{ reverse: boolean }>`
   height: 680px;
@@ -70,7 +70,7 @@ const Scroll = styled.div<{ reverse: boolean }>`
 
 const Scrolly = styled(ScrollLink)`
   text-decoration: none;
-  color: ${(props) => (props.color ?? "#fff")};
+  color: ${(props) => props.color ?? "#fff"};
   display: block;
   border: 1px solid ${(props) => (props.color ? "#ccc" : "#fff")};
   width: 30px;

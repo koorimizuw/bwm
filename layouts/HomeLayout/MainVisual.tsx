@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { Button } from "../../components/Button";
-import image from "@/images/pic1.jpg";
+import { Button } from "✨/components";
+import image from "✨/images/pic1.jpg";
 
 const Background = styled.img`
   min-height: 720px;

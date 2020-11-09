@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { Button, Title, SubTitle } from "@/components";
+import { Button, Title, SubTitle } from "✨/components";
 
 const Container = styled.div`
   max-width: 520px;
