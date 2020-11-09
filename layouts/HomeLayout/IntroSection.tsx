@@ -70,7 +70,7 @@ const Scroll = styled.div<{ reverse: boolean }>`
 
 const Scrolly = styled(ScrollLink)`
   text-decoration: none;
-  color: ${(props) => (props.color ? props.color : "#fff")};
+  color: ${(props) => (props.color ?? "#fff")};
   display: block;
   border: 1px solid ${(props) => (props.color ? "#ccc" : "#fff")};
   width: 30px;
@@ -78,6 +78,28 @@ const Scrolly = styled(ScrollLink)`
   line-height: 30px;
   text-align: center;
 `;
+
+function useIntroSectionColor(color: string, light?: boolean) {
+  const lightStyle = {
+    main: "#fff",
+    title: color,
+    subTitle: "#ccc",
+    text: "#000",
+    buttonBorder: "#ccc",
+    buttonColor: color,
+    scrollyColor: color,
+  } as const;
+  const darkStyle = {
+    main: color,
+    title: "#fff",
+    subTitle: "#fff",
+    text: "#fff",
+    buttonBorder: "#fff",
+    buttonColor: "#fff",
+    scrollyColor: "",
+  } as const;
+  return light ? lightStyle : darkStyle;
+}
 
 export const IntroSection = ({
   id,
@@ -91,33 +113,25 @@ export const IntroSection = ({
   prev,
   next,
 }: IntroItem) => {
-  const lightStyle = {
-    primary: "#fff",
-    secondary: color,
-  };
-  const darkStyle = {
-    primary: color,
-    secondary: "#fff",
-  };
-  const style = light ? lightStyle : darkStyle;
+  const style = useIntroSectionColor(color, light);
 
   return (
-    <Main id={id} color={style.primary} reverse={reverse}>
+    <Main id={id} color={style.main} reverse={reverse}>
       <Visual src={image} />
       <Container>
         <Fade>
           <Section reverse={reverse}>
-            <Title color={style.secondary}>{title}</Title>
-            <SubTitle color={light ? "#ccc" : "#fff"}>{subtitle}</SubTitle>
-            <Text color={light ? "#000" : "#fff"}>{text}</Text>
+            <Title color={style.title}>{title}</Title>
+            <SubTitle color={style.subTitle}>{subtitle}</SubTitle>
+            <Text color={style.text}>{text}</Text>
             <Link href={`/${id}`}>
               <a>
                 <Button
                   width={160}
                   height={47}
                   size={16}
-                  border={light ? "#ccc" : "#fff"}
-                  color={style.secondary}
+                  border={style.buttonBorder}
+                  color={style.buttonColor}
                 >
                   Read More
                 </Button>
@@ -128,21 +142,21 @@ export const IntroSection = ({
         <Scroll reverse={reverse}>
           <Scrolly
             activeClass="active"
-            to={prev ? prev : id}
+            to={prev ?? id}
             spy={true}
             smooth={true}
             duration={800}
-            color={light ? color : ""}
+            color={style.scrollyColor}
           >
             <i className="fa fa-chevron-up" />
           </Scrolly>
           <Scrolly
             activeClass="active"
-            to={next ? next : id}
+            to={next ?? id}
             spy={true}
             smooth={true}
             duration={800}
-            color={light ? color : ""}
+            color={style.scrollyColor}
           >
             <i className="fa fa-chevron-down" />
           </Scrolly>

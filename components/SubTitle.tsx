@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SubTitle = styled.div`
-  --sub-title-color: ${(props) => (props.color ? props.color : "#ccc")};
+  --sub-title-color: ${(props) => (props.color ?? "#ccc")};
   font-family: "Verdana";
   font-size: 14px;
   color: var(--sub-title-color);

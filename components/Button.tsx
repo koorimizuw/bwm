@@ -11,7 +11,7 @@ export const Button = styled.button<{
   background: transparent;
   border: 2px ${(props) => props.border} solid;
   font-size: ${(props) => props.size}px;
-  color: ${(props) => (props.color ? props.color : "#fff")};
+  color: ${(props) => (props.color ?? "#fff")};
   cursor: pointer;
   @media (max-width: 480px) {
     width: 100%;
