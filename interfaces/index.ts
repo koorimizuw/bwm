@@ -21,3 +21,8 @@ export interface MenuLink {
   title: string,
   href: string
 }
+
+export interface User {
+  id:number,
+  name:string
+}
