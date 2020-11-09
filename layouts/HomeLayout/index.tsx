@@ -70,7 +70,7 @@ const IntroText: IntroItem[] = [
 ];
 
 export const HomeLayout = () => (
-  <DefaultLayout title="BMW Fan!!!!!" divider={true}>
+  <DefaultLayout title="BMW Fan!!!!!" divider>
     <MainVisual />
     <IntroBox />
     {IntroText.map((item) => {

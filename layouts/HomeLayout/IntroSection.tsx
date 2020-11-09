@@ -143,8 +143,8 @@ export const IntroSection = ({
           <Scrolly
             activeClass="active"
             to={prev ?? id}
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             duration={800}
             color={style.scrollyColor}
           >
@@ -153,8 +153,8 @@ export const IntroSection = ({
           <Scrolly
             activeClass="active"
             to={next ?? id}
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             duration={800}
             color={style.scrollyColor}
           >
