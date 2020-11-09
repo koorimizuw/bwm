@@ -12,7 +12,7 @@ const Main = styled.div`
   font-family: "Verdana";
   font-weight: 600;
   background-color: #000;
-  width: 100vw;
+  width: 100%;
   height: 70px;
   display: flex;
   justify-content: space-between;

@@ -5,7 +5,7 @@ import image from "✨/images/pic1.jpg";
 
 const Background = styled.img`
   min-height: 720px;
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
   @media (max-width: 480px) {
     min-height: 254px;
@@ -22,7 +22,7 @@ const Main = styled.div`
   &::before {
     content: "";
     height: 400px;
-    width: 100vw;
+    width: 100%;
     background-color: #3f95d8;
     transform: skewY(-5deg);
     display: block;

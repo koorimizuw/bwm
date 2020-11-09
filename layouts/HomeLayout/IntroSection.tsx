@@ -7,7 +7,7 @@ import { IntroItem } from "✨/interfaces";
 
 const Main = styled.div<{ reverse: boolean }>`
   height: 680px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   background: ${(props) => props.color};
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
@@ -96,7 +96,7 @@ function useIntroSectionColor(color: string, light?: boolean) {
     text: "#fff",
     buttonBorder: "#fff",
     buttonColor: "#fff",
-    scrollyColor: "",
+    scrollyColor: "#fff",
   } as const;
   return light ? lightStyle : darkStyle;
 }
